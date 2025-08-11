@@ -55,10 +55,10 @@ From your command line, first clone simplefolio-master:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/eliudm/simplefolio-master
+$ git clone https://github.com/eliudm/portfolio.git
 
 # Move into the repository
-$ cd simplefolio-master
+$ cd portfolio
 
 # Remove the current origin repository
 $ git remote remove origin
@@ -184,7 +184,7 @@ Go to `/src/index.html` and put your information, there are 5 sections:
       </div>
     </div>
   </div>
-</section>
+</section >
 <!-- /END About Section -->
 ```
 
