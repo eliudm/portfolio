@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.JPG" />
+    <title>Eliud Maina | Developer</title>
+    <meta name="keywords" content="Eliud Maina, cyber security, ethical hacker, developer, web developer, software engineer, python django, JavaScript, HTML, PHP, CSS, React, Node.js, frontend, backend" />
+    <meta name="author" content="Eliud Maina" />
+    <meta name="description" content="Eliud Maina | Full-Stack Developer specializing in modern web applications, JavaScript, and responsive design. Passionate about building user-friendly digital experiences." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <style>
+      :root {
+        --primary: #0f2027;
+        --secondary: #2c5364;
+        --accent: #ff6e7f;
+        --gradient: linear-gradient(135deg, #0f2027 0%, #2c5364 70%, #ff6e7f 100%);
+        --card-bg: rgba(255,255,255,0.07);
+        --card-border: #ff6e7f;
+        --text-main: #fff;
+        --text-accent: #ff6e7f;
+        --btn-bg: #ff6e7f;
+        --btn-text: #0f2027;
+        --btn-hover-bg: #fff;
+        --btn-hover-text: #ff6e7f;
+      }
+      body {
+        font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+        background: var(--gradient);
+        color: var(--text-main);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      #hero {
+        background: linear-gradient(120deg, #ff6e7f 0%, #2c5364 100%);
+        color: #fff;
+        padding: 110px 0 70px 0;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        border-radius: 0 0 32px 32px;
+      }
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+        line-height: 1.2;
+      }
+      .text-color-main {
+        color: var(--btn-text);
+        background: var(--btn-bg);
+        padding: 0 14px;
+        border-radius: 10px;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(255,110,127,0.18);
+      }
+      .cta-btn {
+        display: inline-block;
+        margin: 22px 12px 0 12px;
+        padding: 14px 36px;
+        font-size: 1.15rem;
+        font-weight: 600;
+        border-radius: 32px;
+        background: var(--btn-bg);
+        color: var(--btn-text);
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        transition: background 0.2s, color 0.2s;
+        border: none;
+      }
+      .cta-btn--hero {
+        background: var(--primary);
+        color: var(--btn-bg);
+        border: 2px solid var(--btn-bg);
+      }
+      .cta-btn:hover {
+        background: var(--btn-hover-bg);
+        color: var(--btn-hover-text);
+      }
+      section {
+        margin-bottom: 70px;
+      }
+      .section-title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 36px;
+        color: var(--text-accent);
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      .about-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-wrapper__image img {
+        width: 280px;
+        border-radius: 50%;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+        border: 7px solid var(--card-border);
+      }
+      .about-wrapper__info {
+        max-width: 520px;
+      }
+      .about-wrapper__info-text {
+        font-size: 1.15rem;
+        margin-bottom: 22px;
+        line-height: 1.8;
+      }
+      .experience-wrapper {
+        background: var(--card-bg);
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        padding: 32px 24px;
+        margin-bottom: 40px;
+        border-left: 6px solid var(--card-border);
+      }
+      .exp-title {
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: var(--text-accent);
+        margin-bottom: 8px;
+      }
+      .exp-role {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--btn-bg);
+        margin-bottom: 4px;
+      }
+      .exp-date {
+        font-size: 1rem;
+        color: #bbb;
+        margin-bottom: 12px;
+      }
+      .exp-list {
+        margin: 0 0 0 18px;
+        padding: 0;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .project-wrapper {
+        margin-top: 36px;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 56px;
+        background: var(--card-bg);
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        align-items: center;
+        padding: 28px 0;
+        border-left: 5px solid var(--card-border);
+      }
+      .col-lg-4, .col-lg-8, .col-sm-12 {
+        flex: 1;
+        min-width: 260px;
+        padding: 0 20px;
+      }
+      .project-wrapper__text-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 14px;
+        color: var(--text-accent);
+      }
+      .mb-4 {
+        margin-bottom: 20px;
+      }
+      .tech-icons i {
+        font-size: 30px;
+        margin-right: 12px;
+        cursor: pointer;
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.6s ease forwards;
+      }
+      .tech-icons i:nth-child(1) { animation-delay: 0.1s; }
+      .tech-icons i:nth-child(2) { animation-delay: 0.2s; }
+      .tech-icons i:nth-child(3) { animation-delay: 0.3s; }
+      .tech-icons i:nth-child(4) { animation-delay: 0.4s; }
+      .tech-icons i:nth-child(5) { animation-delay: 0.5s; }
+      @keyframes fadeUp {
+        to { opacity: 1; transform: translateY(0);}
+      }
+      .tech-icons i:hover {
+        animation: bounceRotate 0.6s ease;
+        color: var(--text-accent);
+      }
+      @keyframes bounceRotate {
+        0%   { transform: scale(1) rotate(0deg) translateY(0);}
+        30%  { transform: scale(1.2) rotate(10deg) translateY(-5px);}
+        50%  { transform: scale(1.1) rotate(-5deg) translateY(0);}
+        70%  { transform: scale(1.15) rotate(5deg) translateY(-2px);}
+        100% { transform: scale(1) rotate(0deg) translateY(0);}
+      }
+      .project-wrapper__image img {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 20px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+        border: 5px solid var(--card-border);
+      }
+      #contact {
+        background: linear-gradient(120deg, #2c5364 0%, #ff6e7f 100%);
+        color: var(--primary);
+        border-radius: 20px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        padding: 48px 0;
+      }
+      .contact-wrapper__text {
+        font-size: 1.18rem;
+        margin-bottom: 22px;
+        text-align: center;
+      }
+      .footer {
+        background: var(--primary);
+        color: #fff;
+        padding: 36px 0 18px 0;
+        text-align: center;
+        border-top: 2px solid var(--card-border);
+      }
+      .footer .social-links a {
+        margin: 0 12px;
+        color: var(--card-border);
+        font-size: 1.7rem;
+        transition: color 0.2s;
+      }
+      .footer .social-links a:hover {
+        color: #fff;
+      }
+      .footer__text {
+        margin-top: 20px;
+        font-size: 1.05rem;
+        color: #bbb;
+      }
+      .back-to-top {
+        display: inline-block;
+        margin-bottom: 14px;
+        color: var(--card-border);
+        transition: color 0.2s;
+      }
+      .back-to-top:hover {
+        color: #fff;
+      }
+      .typing-name {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid var(--card-border);
+        font-weight: bold;
+        animation: typing 2.5s steps(20, end), blink 0.8s step-end infinite;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: var(--card-border); }
+      }
+      @media (max-width: 900px) {
+        .about-wrapper, .row {
+          flex-direction: column;
+          gap: 28px;
+        }
+        .project-wrapper__image img {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top"></div>
+    <section id="hero">
+      <div class="container">
+        <h1 class="hero-title">
+          Hi, my name is <span class="text-color-main">Eliud Maina</span>
+          <br />
+          I'm a Full-Stack Developer & Cybersecurity Specialist.
+        </h1>
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-wrapper">
+          <div class="about-wrapper__image">
+            <img alt="Profile Image" src="assets/profile.jpg" />
+          </div>
+          <div class="about-wrapper__info">
+            <p class="about-wrapper__info-text">
+              I’m <strong>Eliud Maina</strong>, a passionate <strong>System Admin, Full-Stack Developer</strong> and <strong>Cybersecurity Specialist</strong> 
+              with experience in developing modern, responsive web applications and securing digital systems. 
+              Skilled in JavaScript, React, PHP, Python django, HTML, CSS, and MySQL, I have a proven track record in 
+              delivering user-friendly solutions and implementing robust security measures.
+            </p>
+            <p class="about-wrapper__info-text">
+              With certifications such as <strong>Certified Ethical Hacker (CEH)</strong> and training in Information Security, 
+              Network Administration, and Project Management, I bridge the gap between development and security. 
+              Outside of work, I contribute to online tech communities, mentor upcoming cybersecurity enthusiasts, 
+              and continuously build personal projects to sharpen my skills.
+            </p>
+            <p class="about-wrapper__info-text">
+              My goal is to create secure, scalable, and innovative solutions that make a real impact.
+            </p>
+            <a rel="noreferrer" target="_blank" class="cta-btn" href="assets/Eliud Resume_.pdf">View Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-wrapper">
+          <div class="exp-title">National Health Insurance Fund (NHIF)</div>
+          <div class="exp-role">System Administrator and Technical Support</div>
+          <div class="exp-date">01/2022 - 12/2024</div>
+          <ul class="exp-list">
+            <li>Managed and maintained server infrastructure, including installation, configuration, and troubleshooting of hardware and software systems.</li>
+            <li>Provided technical support to end-users, resolving issues promptly to minimize downtime and ensure smooth operations.</li>
+            <li>Implemented security measures to protect systems and data from cyber threats, including malware detection and intrusion prevention.</li>
+            <li>Conducted regular system backups and disaster recovery procedures to safeguard critical information.</li>
+            <li>Collaborated with cross-functional teams to assess system requirements and implement solutions aligned with organizational objectives.</li>
+            <li>Managed attaches and provided leadership and guidance during their time at NHIF to deliver high quality service to all clients.</li>
+          </ul>
+        </div>
+        <div class="experience-wrapper">
+          <div class="exp-title">County Government of Machakos</div>
+          <div class="exp-role">IT Support</div>
+          <div class="exp-date">05/2019 - 12/2019</div>
+          <ul class="exp-list">
+            <li>Assisted IT team with day-to-day technical support tasks, including software installation, troubleshooting, and user training.</li>
+            <li>Participated in network administration activities, such as configuring routers, switches, and firewalls to maintain network integrity and security.</li>
+            <li>Provided on-site support for hardware and software issues, ensuring timely resolution to minimize disruption to operations.</li>
+            <li>Assisted in the implementation of IT projects, including system upgrades and migrations, following best practices and procedures.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-wrapper">
+          <!-- Project 1 -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">E-Doctor Appointment System</h3>
+                <p class="mb-4">
+                  A web-based platform for booking and managing doctor appointments online.
+                  Built with JavaScript, PHP, CSS, MySQL, and HTML — strengthened my database
+                  design, backend logic, and responsive design skills.
+                </p>
+                <p class="tech-icons">
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-php-plain colored"></i>
+                  <i class="devicon-mysql-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                </p>
+                <a class="cta-btn cta-btn--hero" target="_blank" href="#!">See Live</a>
+                <a class="cta-btn text-color-main" target="_blank" href="https://github.com/eliudm">Source Code</a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <img alt="E-Doctor Appointment System" src="assets/edoctor.png">
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Food Order & Table Reservation</h3>
+                <p class="mb-4">
+                  An online restaurant system for food ordering and table booking.
+                  Built with JavaScript, PHP, CSS, and HTML — improved CRUD operations
+                  and authentication handling.
+                </p>
+                <p class="tech-icons">
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-php-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                </p>
+                <a class="cta-btn cta-btn--hero" target="_blank" href="#!">See Live</a>
+                <a class="cta-btn text-color-main" target="_blank" href="https://github.com/eliudm">Source Code</a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <img alt="Food Order & Table Reservation" src="assets/foodorder.jpg">
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Robofriends React App</h3>
+                <p class="mb-4">
+                  A React.js app fetching and displaying robot cards from an API.
+                  Strengthened my skills in React components, state management, and API integration.
+                </p>
+                <p class="tech-icons">
+                  <i class="devicon-react-original colored"></i>
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                </p>
+                <a class="cta-btn cta-btn--hero" target="_blank" href="#!">See Live</a>
+                <a class="cta-btn text-color-main" target="_blank" href="https://github.com/eliudm">Source Code</a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <img alt="Robofriends" src="assets/robofriends.png">
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Blood Bank System</h3>
+                <p class="mb-4">
+                  A system for managing blood donations, inventory, and donor records.
+                  Built with JavaScript, PHP, CSS, and HTML — focused on database
+                  structure and privacy compliance.
+                </p>
+                <p class="tech-icons">
+                  <i class="devicon-javascript-plain colored"></i>
+                  <i class="devicon-php-plain colored"></i>
+                  <i class="devicon-css3-plain colored"></i>
+                  <i class="devicon-html5-plain colored"></i>
+                </p>
+                <a class="cta-btn cta-btn--hero" target="_blank" href="#!">See Live</a>
+                <a class="cta-btn text-color-main" target="_blank" href="https://github.com/eliudm">Source Code</a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <img alt="Blood Bank System" src="assets/bloodbank.jpeg">
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">Python Scripts Collection</h3>
+                <p class="mb-4">
+                  A GitHub repository of Python scripts for automation, data processing,
+                  and cybersecurity tasks.
+                </p>
+                <p class="tech-icons">
+                  <i class="devicon-python-plain colored"></i>
+                  <i class="devicon-github-original"></i>
+                </p>
+                <a class="cta-btn cta-btn--hero" target="_blank" href="https://github.com/eliudm">See Live</a>
+                <a class="cta-btn text-color-main" target="_blank" href="https://github.com/eliudm">Source Code</a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <img alt="Python Scripts" src="assets/python.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper">
+          <p class="contact-wrapper__text">
+            Have a project in mind, a role to fill, or just want to connect? I’d love to hear from you! 
+            Whether it’s web development, cybersecurity, or innovative tech solutions — let’s make it happen.
+          </p>
+          <a rel="noreferrer" target="_blank" class="cta-btn" href="mailto:Meliud61@gmail.com">Email Me</a>
+          <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="tel:+254741540054">Call Me</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a rel="noreferrer" href="#top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a rel="noreferrer" href="https://twitter.com/" target="_blank">
+            <i class="fab fa-twitter fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://linkedin.com/in/eliud-maina-73b9691b7" target="_blank">
+            <i class="fab fa-linkedin fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="https://github.com/eliudm" target="_blank">
+            <i class="fab fa-github fa-inverse"></i>
+          </a>
+        </div>
+        <hr />
+        <p class="footer__text">
+          © 2025 - Designed & Developed by 
+          <a rel="noreferrer" href="https://linkedin.com/in/eliud-maina-73b9691b7" target="_blank" class="typing-name">
+            Eliud Maina
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script defer type="module" src="index.js"></script>
+  </body>
+</html>
