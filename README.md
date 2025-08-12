@@ -1,11 +1,6 @@
-# Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/eliudm/simplefolio?color=blue)](https://github.com/eliudm/simplefolio-master/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/eliudm/simplefolio-master) ![GitHub forks](https://img.shields.io/github/forks/eliudm/simplefolio-master)
-
+# Simplefolio ⚡️
 ## A minimal portfolio template for Developers!
 
-<h2 align="center">
-  <img src="https://github.com/eliudm/gatsby-simplefolio/blob/master/examples/example.gif" alt="Simplefolio" width="600px" />
-  <br>
-</h2>
 
 ## Features
 
