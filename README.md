@@ -12,7 +12,7 @@
 ⚡️ Optimized with Parcel\
 ⚡️ Well organized documentation
 
-To view the demo: **[click here](https://eliudmainaresume.netlify.app//)**
+To view the demo: **[click here](https://eliudmaina.netlify.app//)**
 
 ---
 
